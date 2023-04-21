@@ -27,9 +27,7 @@ Functions={"+": Add, "-": Subtract, "*":Multiply, "/":Divide}
 
 num1=int(input("What's your first number?: "))
 
-answer="yes"
-
-while answer=="yes":
+def Calculator(num1):
     for x in Functions:
         print(x)
     operation_symbol=input("Pick an operator from the list above: ")
@@ -43,5 +41,7 @@ while answer=="yes":
     answer=input('Type "yes" if you want to continue with previous result: ')
     if answer=="yes":
         os.system('cls' if os.name == 'nt' else 'clear')
-        num1=result
+        Calculator(result)
+
+Calculator(num1)
 
